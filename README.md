@@ -1,4 +1,4 @@
-## Producation-ready microservices with Go and Kubernetes @ ContainerDays 2018
+## Production-ready microservices with Go and Kubernetes @ ContainerDays 2018
 
 ### Slides
 
