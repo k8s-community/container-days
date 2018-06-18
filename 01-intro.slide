@@ -1,0 +1,55 @@
+Production-ready microservices with Go and Kubernetes
+ContainerDays
+09:00 18 Jun 2018
+
+Elena Grahovac
+Senior Go Developer, DCMN
+elena@grahovac.me
+@webdeva
+
+* Checklist
+
+- Go
+.link https://golang.org/dl/
+- IDE or editor to write code
+- Docker
+.link https://www.docker.com/community-edition#/download
+- If Windows: Cygwin
+.link https://cygwin.com/install.html
+- GitHub Account
+.link https://github.com
+- Git client
+
+* These slides
+
+- https://github.com/k8s-community/container-days
+
+
+* Agenda
+
+- 14:00 Getting to know each other
+- 14:15 Intoduction. What are we going to do and why
+- 14:30 What we should achieve today (demo)
+- 14:35 Writing a service from scratch and discuss important topics
+- 16:30 Configuring necessary things to interact with Kubernetes
+- 16:40 Time to finish optional steps, ask for codereview or have a break
+- 17:00 Hello, Kubernetes!
+- 17:15 Adding configuration to release the service we wrote
+- 17:30 Practising with CI/CD and other things we learnt today
+- 17:50 Discussing the results
+
+* Getting to know each other
+
+- Who are you?
+- What is your experience with Go and Kubernetes?
+- What do you expect to get out of this workshop?
+
+* Getting to know each other
+
+- Who is going to use Windows today?
+
+* Cleanup notes
+
+- The cluster will be available for a couple of weeks.
+- On July, 2nd the cluster and all the data will be deleted.
+- If you want us to delete your data earlier, please let us know.
