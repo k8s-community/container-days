@@ -8,9 +8,55 @@ elena@grahovac.me
 @webdeva
 
 
-* Trying Kubernetes
+* Local cinfiguration and tools
 
 .link https://ui.k8s.community
+
+* Hello, Kubernetes!
+
+Deploy and expose deployment of your first service:
+
+    USER=your_github_user
+    kubectl run hello-app --image=gcr.io/google-samples/hello-app:1.0 --port=8080 -n ${USER}
+    kubectl expose kubectl expose deployment hello-app -n ${USER}
+
+* Hello, Kubernetes!
+
+Add ingress (create hello-ingress.yaml file, don'f forget to change namespace):
+
+    apiVersion: extensions/v1beta1
+    kind: Ingress
+    metadata:
+    name: hello-ingress
+    namespace: rumyantseva
+    annotations:
+        kubernetes.io/ingress.class: nginx
+        nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    spec:
+    tls:
+    - secretName: tls-secret
+        hosts:
+        - services.k8s.community
+    rules:
+    - http:
+        paths:
+        - path: /rumyantseva/hello
+            backend:
+            serviceName: hello-app
+            servicePort: 8080
+        host: services.k8s.community
+
+* Hello, Kubernetes!
+
+Apply ingress configuration:
+
+    kubectl apply -f hello-ingress.yaml
+
+Check this out:
+
+    kubectl get services -n ${USER}
+
+    curl -i https://services.k8s.community/${USER}/hello
 
 * Trying CI/CD
 
@@ -21,6 +67,13 @@ elena@grahovac.me
 - CI and CD processes should be started
 - If everything is ok your service will be available at
  https://services.k8s.community/<username>/<app name>
+
+* Additional tasks
+
+- When your service is released, you can try to play with some other useful kubectl commands.
+For example, try to find how to get logs of your application. Try to delete pods and see what happens.
+
+- Try to change something with your current service or release another one.
 
 * Examples
 
