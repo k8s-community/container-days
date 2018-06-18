@@ -17,7 +17,7 @@ Or view online on https://talks.godoc.org:
 
 ### Additional materials
 
-The source code of the service we wrote togethet is available [here](https://github.com/rumyantseva/cdays).
+The source code of the service we wrote together is available [here](https://github.com/rumyantseva/cdays).
 
 ### Questions and contribution
 
