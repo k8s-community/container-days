@@ -3,7 +3,6 @@ Production-ready microservices with Go and Kubernetes
 09:00 18 Jun 2018
 
 Elena Grahovac
-Senior Go Developer, DCMN
 elena@grahovac.me
 @webdeva
 
@@ -18,7 +17,7 @@ Deploy and expose deployment of your first service:
 
     USER=your_github_user
     kubectl run hello-app --image=gcr.io/google-samples/hello-app:1.0 --port=8080 -n ${USER}
-    kubectl expose kubectl expose deployment hello-app -n ${USER}
+    kubectl expose deployment hello-app -n ${USER}
 
 * Hello, Kubernetes!
 
